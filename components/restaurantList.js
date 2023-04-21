@@ -16,6 +16,8 @@ import {
   Col
 } from "reactstrap";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
+
 function RestaurantList(props) {
   const [restaurantID, setRestaurantID] = useState(0)
   const { cart } = useContext(AppContext);
@@ -57,7 +59,7 @@ function RestaurantList(props) {
             top={true}
             style={{ height: 200 }}
             src={
-              `http://localhost:1337` + res.image.url
+              API_URL + res.image.url
             }
           />
           <CardBody>

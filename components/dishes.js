@@ -16,7 +16,7 @@ function Dishes({restId}){
   const {addItem} = useContext(AppContext)
 
   
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://3.142.93.139:1337";
 
 const GET_RESTAURANT_DISHES = gql`
   query($id: ID!) {
