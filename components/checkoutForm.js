@@ -6,6 +6,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CardSection from "./cardSection";
 import AppContext from "./context";
 import Cookies from "js-cookie";
+import Router from "next/router";
 
 function CheckoutForm() {
   const [data, setData] = useState({
@@ -58,6 +59,7 @@ function CheckoutForm() {
       console.log("SUCCESS")
     }
 
+Router.push ("/thanks");
     // OTHER stripe methods you can use depending on app
     // // or createPaymentMethod - https://stripe.com/docs/js/payment_intents/create_payment_method
     // stripe.createPaymentMethod({
